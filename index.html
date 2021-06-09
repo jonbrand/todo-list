@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./reset.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
+
+    <title>Todo List</title>
+</head>
+<body>
+    <div class="app">
+        <!-- sidebar -->
+        <aside class="sidebar">
+            <header class="header">
+                <h1 class="header-title">Minhas Categorias</h1>
+                <form class="sidebar-form" data-new-category-form>
+                    <div class="form-control">
+                        <input type="text" placeholder="Enter Category" data-new-category-input>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Adicionar Categoria
+                    </button>
+                </form>
+            </header>
+            <ul class="sidebar-list" data-categories>
+                <li class="sidebar-item">Todas as Categorias</li>
+                <li class="sidebar-item">Trabalho <input type="color" class="sidebar-color"></li>
+                <li class="sidebar-item">Estudos <input type="color" class="sidebar-color"></li>
+            </ul>
+        </aside>
+
+        <!-- main -->
+        <main class="main">
+            <header class="header">
+                <div>
+                    <h1 class="header-title">
+                        Bem-vindo de volta ao <strong>Organizator</strong>
+                    </h1>
+                    <div class="currently-viewing" data-new-todo-form>Você está vendo todas as categorias</div>
+                </div>
+
+                <!-- create todo form -->
+                <form class="create-todo-form" data-new-todo-form>
+                    <div class="form-control">
+                        <select data-new-todo-select required>
+                            <option value="">Todas as categorias</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" data-new-todo-input placeholder="Enter Todo" required>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fa fa-flus" aria-hidden="true"></i>Adicionar To-do
+                    </button>
+                </form>
+
+                <!-- update todo form -->
+                <form class="edit-todo-form" data-edit-todo-form>
+                    <div class="form control">
+                        <select data-edit-todo-select>
+                            <option value="">Todas as categorias</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" data-edit-todo-input placeholder="Enter todo" required>
+                    </div>
+                    <button class="btn btn-primary">Salvar</button>
+                </form>
+            </header>
+
+            
+        </main>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
